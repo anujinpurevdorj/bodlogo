@@ -1,0 +1,22 @@
+<html>
+<h1 id="date"></h1>
+
+<body onload="startTime()">
+    <script>
+        function startTime() {
+            var year = new Date();
+            document.getElementById("date").innerHTML = year.getFullYear() + ": ";
+            var months = ["January", "February", "March", "April",
+                "May", "June", "July", "August", "September", "October", "November", "December"
+            ];
+            document.getElementById("date").innerHTML += months[year.getMonth()] + " : ";
+            document.getElementById("date").innerHTML += year.getDate() + " : ";
+            document.getElementById("date").innerHTML += year.getHours() + " : ";
+            document.getElementById("date").innerHTML += year.getMinutes() + " : ";
+            document.getElementById("date").innerHTML += year.getSeconds();
+            var t = setTimeout(startTime, 500);
+        }
+    </script>
+</body>
+
+</html>
